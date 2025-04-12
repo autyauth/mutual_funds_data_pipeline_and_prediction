@@ -1,0 +1,13 @@
+name,proj_id,is_use_api,data_source,json_config,invalid_date
+BGOLDRMF,M0116_2553,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+B-INNOTECHRMF,M0213_2561,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+B-INNOTECHSSF,M0078_2565,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+BERMF,M0067_2545,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+BEQSSF,M0124_2563,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+BFLRMF,M0059_2545,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+B25RMF,M0991_2550,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+BFRMF,M0062_2545,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+B-SI-THAIESG,M0092_2567,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+MM-RMF,M0597_2551,True,"https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}","{""name"": ""Fund Daily NAV"", ""url"": ""https://api.sec.or.th/FundDailyInfo/{proj_id}/dailynav/{nav_date}"", ""Ocp-Apim-Subscription-Key"": ""SEC KEY""}",2025-01-01
+SET,,False,"settrade_v2","",2025-01-01
+YTM,,True,"Bond Yield API","",2025-01-01

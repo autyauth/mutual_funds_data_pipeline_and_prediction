@@ -1,0 +1,310 @@
+models:
+  BGOLDRMF:
+    proj_id: "M0116_2553"
+    time_step: 35
+    scaling: standardScaler
+    input_features:
+      - "nav"
+    feature_engineering:
+      - name: "RSI_30_close"
+        chain:
+          - function: "rsi"
+            params:
+              periods: 30
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/rsi_last_values.csv"
+        input: "nav"
+      - name: "EMA_diff_56_close"
+        chain:
+          - function: "ema_diff"
+            params:
+              periods: 56
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/ema_diff_last_values.csv"
+        input: "nav"
+      - name: "CCI_52_close"
+        chain:
+          - function: "cci"
+            params:
+              periods: 52
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/cci_last_values.csv"
+        input: "nav"
+      - name: "di_plus_close"
+        chain:
+          - function: "di_plus"
+            params:
+              periods: 14
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/di_plus_last_values.csv"
+        input: "nav"
+      - name: "EMA_56_pct_change_close_5"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 5
+          - function: "ema"
+            params:
+              periods: 56
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/ema_last_values.csv"
+        input: "nav"
+      - name: "MACD_close"
+        chain:
+          - function: "macd"
+            params:
+              fast: 12
+              slow: 26
+              signal: 9
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/macd_last_values.csv"
+        input: "nav"
+      - name: "di_minus_close"
+        chain:
+          - function: "di_minus"
+            params:
+              periods: 14
+            last_values_path: "/opt/airflow/data/preprocess_data/BGOLDRMF/di_minus_last_values.csv"
+        input: "nav"
+  B-INNOTECHRMF:
+    proj_id: "M0213_2561"
+    time_step: 5
+    scaling: standardScaler
+    input_features:
+      - "nav"
+    feature_engineering:
+      - name: "RSI_30_close"
+        chain:
+          - function: "rsi"
+            params:
+              periods: 30
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/rsi_last_values.csv"
+        input: "nav"
+      - name: "EMA_diff_56_close"
+        chain:
+          - function: "ema_diff"
+            params:
+              periods: 56
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/ema_diff_last_values.csv"
+        input: "nav"
+      - name: "EMA_56_pct_change_close_5"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 5
+          - function: "ema"
+            params:
+              periods: 56
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/ema_last_values.csv"
+        input: "nav"
+      - name: "di_plus_close"
+        chain:
+          - function: "di_plus"
+            params:
+              periods: 14
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/di_plus_last_values.csv"
+        input: "nav"
+      - name: "di_minus_close"
+        chain:
+          - function: "di_minus"
+            params:
+              periods: 14
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/di_minus_last_values.csv"
+        input: "nav"
+      - name: "ATR_18_close"
+        chain:
+          - function: "atr"
+            params:
+              periods: 18
+            last_values_path: "/opt/airflow/data/preprocess_data/B-INNOTECHRMF/atr_last_values.csv"
+        input: "nav"
+  BERMF:
+    proj_id: "M0067_2545"
+    time_step: 5
+    scaling: standardScaler
+    input_features:
+      - "nav"
+    feature_engineering:
+      - name: "di_minus_pct_change_close_90"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 90
+          - function: "di_minus"
+            params:
+              periods: 14
+            last_values_path: "/opt/airflow/data/preprocess_data/BERMF/di_minus_last_values.csv"
+        input: "nav"
+      - name: "RSI_16_pct_change_close_100"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 100
+          - function: "rsi"
+            params:
+              periods: 16
+            last_values_path: "/opt/airflow/data/preprocess_data/BERMF/rsi_last_values.csv"
+        input: "nav"
+      - name: "CCI_44_close"
+        chain:
+          - function: "cci"
+            params:
+              periods: 44
+            last_values_path: "/opt/airflow/data/preprocess_data/BERMF/cci_last_values.csv"
+        input: "nav"
+      - name: "MACD_hist_44_pct_change_close_80"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 80
+          - function: "macd_hist"
+            params:
+              fast: 56
+              slow: 70
+              signal: 53
+            last_values_path: "/opt/airflow/data/preprocess_data/BERMF/macd44_last_values.csv"
+        input: "nav"
+      - name: "MACD_14_pct_change_close_75"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 75
+          - function: "macd"
+            params:
+              fast: 26
+              slow: 40
+              signal: 23
+            last_values_path: "/opt/airflow/data/preprocess_data/BERMF/macd14_last_values.csv"
+        input: "nav"
+      - name: "ROC_52_close"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 52
+        input: "nav"
+  BEQSSF:
+    proj_id: "M0124_2563"
+    time_step: 5
+    scaling: standardScaler
+    input_features:
+      - "nav"
+      - "set"
+    feature_engineering:
+      - name: "ATR_78_pct_change_SET_70"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 70
+          - function: "atr"
+            params:
+              periods: 78
+            last_values_path: "/opt/airflow/data/preprocess_data/BEQSSF/atr_last_values.csv"
+        input: "set"
+      - name: "EMA_252_close"
+        chain:
+          - function: "ema"
+            params:
+              periods: 252
+            last_values_path: "/opt/airflow/data/preprocess_data/BEQSSF/ema_last_values.csv"
+        input: "nav"
+      - name: "BB_middle_252_close"
+        chain:
+          - function: "bb_middle"
+            params:
+              periods: 252
+            last_values_path: "/opt/airflow/data/preprocess_data/BEQSSF/bb_middle_last_values.csv"
+        input: "nav"
+  BFLRMF:
+    proj_id: "M0059_2545"
+    time_step: 10
+    scaling: standardScaler
+    input_features:
+      - "nav"
+    feature_engineering:
+      - name: "RSI_30_pct_change_close_80"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 80
+          - function: "rsi"
+            params:
+              periods: 30
+            last_values_path: "/opt/airflow/data/preprocess_data/BFLRMF/rsi_last_values.csv"
+        input: "nav"
+      - name: "MACD_hist_44_pct_change_close_80"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 80
+          - function: "macd_hist"
+            params:
+              fast: 56
+              slow: 70
+              signal: 53
+            last_values_path: "/opt/airflow/data/preprocess_data/BFLRMF/macd44_last_values.csv"
+        input: "nav"
+      - name: "MACD_16_pct_change_close_75"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 75
+          - function: "macd"
+            params:
+              fast: 28
+              slow: 42
+              signal: 25
+            last_values_path: "/opt/airflow/data/preprocess_data/BFLRMF/macd16_last_values.csv"
+        input: "nav"
+      - name: "CCI_56_pct_change_close_90"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 90
+          - function: "cci"
+            params:
+              periods: 56
+            last_values_path: "/opt/airflow/data/preprocess_data/BFLRMF/cci_last_values.csv"
+        input: "nav"
+      - name: "EMA_12_26_dff_pct_change_close_90"
+        chain:
+          - function: "pct_change"
+            params:
+              periods: 90
+          - function: "ema_diff_sf"
+            params:
+              fast: 12
+              slow: 26
+            last_values_path: "/opt/airflow/data/preprocess_data/BFLRMF/ema_12_26_dff_last_values.csv"
+        input: "nav"
+  B25RMF:
+    proj_id: "M0991_2550"
+    time_step: 25
+    scaling: standardScaler
+    input_features:
+      - "nav"
+      - "set"
+    feature_engineering:
+      - name: "SET"
+        chain:
+          - function: ""
+        input: "set"
+      - name: "Close"
+        chain:
+          - function: ""
+        input: "nav"
+  BFRMF:
+    proj_id: "M0062_2545"
+    time_step: 20
+    scaling: standardScaler
+    input_features:
+      - "ytm"
+    feature_engineering:
+      - name: "YTM"
+        chain:
+          - function: ""
+        input: "ytm"
+  MM-RMF:
+    proj_id: "M0597_2551"
+    time_step: 45
+    scaling: standardScaler
+    input_features:
+      - "ytm"
+    feature_engineering:
+      - name: "YTM"
+        chain:
+          - function: ""
+        input: "ytm"

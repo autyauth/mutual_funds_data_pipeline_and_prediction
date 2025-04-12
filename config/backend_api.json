@@ -1,0 +1,43 @@
+{
+    "login": {
+        "name": "Login",
+        "url": "http://mafia_backend_app:5000/api/auth/login",
+        "username": "admin",
+        "password": "PASSWORD"
+    },
+    "nav_history": {
+        "name": "Fund Daily NAV",
+        "url": "http://mafia_backend_app:5000/api/nav-history/add",
+        "username": "admin",
+        "password": "PASSWORD",
+        "fund_send": [
+            {"name": "BGOLDRMF", "proj_id": "M0116_2553"},
+            {"name": "B-INNOTECHRMF", "proj_id": "M0213_2561"},
+            {"name": "B-INNOTECHSSF", "proj_id": "M0078_2565"},
+            {"name": "BERMF", "proj_id": "M0067_2545"},
+            {"name": "BEQSSF", "proj_id": "M0124_2563"},
+            {"name": "BFLRMF", "proj_id": "M0059_2545"},
+            {"name": "B25RMF", "proj_id": "M0991_2550"},
+            {"name": "BFRMF", "proj_id": "M0062_2545"},
+            {"name": "B-SI-THAIESG", "proj_id": "M0092_2567"},
+            {"name": "MM-RMF", "proj_id": "M0597_2551"}
+        ]
+    },
+    "prediction_trend_funds":{
+        "name": "Prediction Trend Funds",
+        "url": "http://mafia_backend_app:5000/api/prediction-trend-funds/add",
+        "username": "admin",
+        "password": "PASSWORD",
+        "fund_send": [
+            {"name": "BGOLDRMF", "proj_id": "M0116_2553"},
+            {"name": "B-INNOTECHRMF", "proj_id": "M0213_2561"},
+            {"name": "B-INNOTECHSSF", "proj_id": "M0078_2565"},
+            {"name": "BERMF", "proj_id": "M0067_2545"},
+            {"name": "BEQSSF", "proj_id": "M0124_2563"},
+            {"name": "BFLRMF", "proj_id": "M0059_2545"},
+            {"name": "B25RMF", "proj_id": "M0991_2550"},
+            {"name": "BFRMF", "proj_id": "M0062_2545"},
+            {"name": "MM-RMF", "proj_id": "M0597_2551"}
+        ]
+    }
+}
